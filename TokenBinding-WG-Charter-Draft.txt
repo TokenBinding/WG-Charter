@@ -6,19 +6,19 @@ Web services generate various security tokens (e.g.  HTTP cookies, OAuth tokens,
 to access protected resources. Currently these are bearer tokens, i.e. any party in possession of such token 
 gains access to the protected resource. Attackers export bearer tokens from client machines or from 
 compromised network connections, present these bearer tokens to Web services, and impersonate authenticated 
-users. The idea of Token Binding is to enable defense against such attacks by cryptographically binding 
-security tokens to the TLS layer.
+users. Token Binding enables defense against such attacks by cryptographically binding security tokens to the 
+TLS layer.
 
 The tasks of this working group are as follows:
 1.    Specify the Token Binding protocol v1.0.
 2.    Specify the use of the Token Binding protocol in combination with HTTPS.
 
 It is a goal of this working group to enable defense against attacks that involve unauthorized replay of 
-security tokens, but other issues associated with the use of security tokens are out of scope. It is a goal 
-of this working group to design the Token Binding protocol such that it would be also useable with 
-application protocols other than HTTPS, however specifying such uses is not a primary goal.
+security tokens. Other issues associated with the use of security tokens are out of scope. Another goal 
+of this working group is to design the Token Binding protocol such that it would be also useable with 
+application protocols other than HTTPS. Specifying alternative application protocols is not a primary goal.
 
-Some of the main design goals for the Token Binding protocol, in no particular order:
+The main design objectives for the Token Binding protocol, in no particular order:
 1.    Allow applications and services to prevent unauthorized replay of security tokens.
 2.    Allow strong key protection, e.g. using hardware-bound keys.
 3.    Support both first-party (server generates a token for later use with this server) and federation 
@@ -28,9 +28,9 @@ Some of the main design goals for the Token Binding protocol, in no particular o
 6.    Allow the negotiation of the Token Binding protocol without additional round-trips.
 7.    Allow the use of multiple cryptographic algorithms, so that a variety of secure hardware modules with 
       different cryptographic capabilities could be used with Token Binding.
-8.    Propose Token Binding spec that can be implemented in Web browsers (but is not limited to them). E.g. 
-      Web browsers require that the same bound security token must be presentable over multiple TLS sessions 
-      and connections.
+8.    Propose Token Binding specification that can be implemented in Web browsers (but is not limited to them). 
+      E.g. Web browsers require that the same bound security token must be presentable over multiple TLS 
+      sessions and connections.
 
 The working group will use the following documents as a starting point for its work:
 -     draft-popov-token-binding-00;
