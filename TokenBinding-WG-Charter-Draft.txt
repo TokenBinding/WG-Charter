@@ -6,8 +6,8 @@ Web services generate various security tokens (e.g.  HTTP cookies, OAuth tokens,
 to access protected resources. Currently these are bearer tokens, i.e. any party in possession of such token 
 gains access to the protected resource. Attackers export bearer tokens from client machines or from 
 compromised network connections, present these bearer tokens to Web services, and impersonate authenticated 
-users. Token Binding enables defense against such attacks by cryptographically binding security tokens to the 
-TLS layer.
+users. Token Binding enables defense against such attacks by cryptographically binding security tokens to a 
+secret held by the client.
 
 The tasks of this working group are as follows:
 1.    Specify the Token Binding protocol v1.0.
